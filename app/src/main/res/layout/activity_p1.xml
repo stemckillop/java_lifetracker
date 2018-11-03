@@ -14,10 +14,11 @@
         android:layout_marginRight="4dp"
         android:layout_marginTop="4dp"
         android:layout_weight="1"
-        android:background="@drawable/player_life_frame">
+        android:background="@drawable/player_life_frame"
+        android:backgroundTint="@android:color/holo_blue_bright">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/p1Life"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -26,7 +27,7 @@
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto"
             android:text="20"
-            android:textSize="96sp"
+            android:textSize="132sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,25 +91,38 @@
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:alpha="0.1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/life_button_ripple"
+                android:onClick="modifyLife"
                 android:scaleType="fitCenter"
+                android:tag="1s"
                 android:tint="@android:color/black"
                 app:srcCompat="@drawable/subtract" />
 
+            <Button
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:alpha="0.1"
+                android:background="@drawable/life_button_ripple"
+                android:onClick="modifyLife"
+                android:tag="1m" />
+
             <ImageButton
                 android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:alpha="0.1"
-                android:background="@android:color/transparent"
+                android:background="@drawable/life_button_ripple"
+                android:onClick="modifyLife"
                 android:scaleType="fitCenter"
+                android:tag="1a"
                 android:tint="@android:color/black"
                 app:srcCompat="@drawable/add" />
         </LinearLayout>
