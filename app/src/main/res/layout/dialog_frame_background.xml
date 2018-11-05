@@ -1,19 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="316dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/roboto"
+        android:text="Background Color:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="8dp" />
 
     <TableLayout
+        android:id="@+id/color_table"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/d_bg_none"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/player_life_frame"
+                android:tag="b0" />
+
+            <Button
+                android:id="@+id/d_bg_w"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/player_life_frame"
+                android:backgroundTint="@color/mana_white"
+                android:tag="b1" />
+
+            <Button
+                android:id="@+id/d_bg_u"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/player_life_frame"
+                android:backgroundTint="@color/mana_blue"
+                android:tag="b2" />
+
+            <Button
+                android:id="@+id/d_bg_b"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/player_life_frame"
+                android:backgroundTint="@color/mana_black"
+                android:tag="b3" />
+
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/player_life_frame"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/d_bg_r"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/player_life_frame"
+                android:backgroundTint="@color/mana_red"
+                android:tag="b4" />
+
+            <Button
+                android:id="@+id/d_bg_g"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/player_life_frame"
+                android:backgroundTint="@color/mana_green"
+                android:tag="b5" />
+
+            <Button
+                android:id="@+id/d_bg_c"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:background="@drawable/player_life_frame"
+                android:backgroundTint="@color/mana_colorless"
+                android:tag="b6" />
+        </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto"
+        android:text="Guild Icon:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/color_table" />
+
+    <TableLayout
+        android:id="@+id/guild_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/d_g_azorius"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g0"
+                app:srcCompat="@drawable/azorius" />
+
+            <ImageButton
+                android:id="@+id/d_g_boros"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g1"
+                app:srcCompat="@drawable/boros" />
+
+            <ImageButton
+                android:id="@+id/d_g_dimir"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g2"
+                app:srcCompat="@drawable/dimir" />
+
+            <ImageButton
+                android:id="@+id/d_g_golgari"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g3"
+                app:srcCompat="@drawable/golgari" />
+
+            <ImageButton
+                android:id="@+id/d_g_gruul"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g4"
+                app:srcCompat="@drawable/gruul" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/d_g_izzet"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g5"
+                app:srcCompat="@drawable/izzet" />
+
+            <ImageButton
+                android:id="@+id/d_g_orzhov"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g6"
+                app:srcCompat="@drawable/orzhov" />
+
+            <ImageButton
+                android:id="@+id/d_g_rakdos"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g7"
+                app:srcCompat="@drawable/rakdos" />
+
+            <ImageButton
+                android:id="@+id/d_g_selesyna"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g8"
+                app:srcCompat="@drawable/selesnya" />
+
+            <ImageButton
+                android:id="@+id/d_g_simic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@android:color/transparent"
+                android:padding="4dp"
+                android:scaleType="fitCenter"
+                android:tag="g9"
+                app:srcCompat="@drawable/simic" />
+        </TableRow>
+
+    </TableLayout>
+
 </android.support.constraint.ConstraintLayout>
